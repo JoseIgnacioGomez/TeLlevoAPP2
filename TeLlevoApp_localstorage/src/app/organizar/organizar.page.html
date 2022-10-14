@@ -1,9 +1,42 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>organizar</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-menu></app-menu>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+        <ion-title>Crear viaje</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content>
-organizar viaje
+  <ion-item>
+    <ion-label position="floating">Asientos Disponibles</ion-label>
+    <ion-input placeholder="N° de asientos disponibles"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Lugar de Destino</ion-label>
+    <ion-input placeholder="Destino"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Hora de Salida</ion-label>
+    <ion-input placeholder="Salida"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Modelo de Auto</ion-label>
+    <ion-input placeholder=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Número de Celular</ion-label>
+    <ion-input placeholder="Contacto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button>
+      Crear  
+    </ion-button>
+  </ion-item>
 </ion-content>

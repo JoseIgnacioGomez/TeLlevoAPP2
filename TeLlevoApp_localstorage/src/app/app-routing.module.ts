@@ -29,6 +29,11 @@ const routes: Routes = [
     loadChildren: () => import('./organizar/organizar.module').then( m => m.OrganizarPageModule),
     canLoad:[AuthLoginGuard]
   },
+  {
+    path: '**',
+    loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
+  },
+
 ];
 
 @NgModule({
