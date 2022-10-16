@@ -22,14 +22,14 @@
       <ion-footer>
       <ion-item>
         <ion-col>
-          <ion-button (click)="ingresar()">Iniciar Sesión</ion-button>
+          <ion-button (click)="ingresar()" size="full">Iniciar Sesión</ion-button>
         </ion-col>
       </ion-item>
-        <ion-toolbar color="primary">
-          <ion-buttons slot="end">
-            <ion-button [routerLink]="['/olvide']">¿Olvidaste la contraseña?</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
+      <ion-item>
+        <ion-col>
+          <ion-button (click)="ingresar()" [routerLink]="['/olvide']" size="full">¿Olvidaste tu contraseña?</ion-button>
+        </ion-col>
+      </ion-item>
       </ion-footer>
   
 

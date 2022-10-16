@@ -32,7 +32,11 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
+  },  {
+    path: 'buscar-viaje',
+    loadChildren: () => import('./buscar-viaje/buscar-viaje.module').then( m => m.BuscarViajePageModule)
   },
+
 ];
 
 @NgModule({
