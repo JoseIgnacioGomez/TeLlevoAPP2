@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
+import { Storage } from '@capacitor/storage';
 
 @Component({
   selector: 'app-buscar-viaje',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarViajePage implements OnInit {
 
-  constructor() { }
+  constructor(private toastController: ToastController) { }
 
   ngOnInit() {
   }
 
+  verDatos(){
+
+    Storage.get({key: 'usuario'}).then((valor)=> {
+
+      var objeto = JSON.parse(valor.value);
+      console.log(objeto);
+
+    });
+     
+  }
+    
 }

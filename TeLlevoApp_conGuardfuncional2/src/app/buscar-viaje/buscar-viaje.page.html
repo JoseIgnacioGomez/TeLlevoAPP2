@@ -1,12 +1,11 @@
-<app-menu></app-menu>
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Crea tu viaje</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+      <ion-title>Buscar Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
   <ion-item>
@@ -25,6 +24,6 @@
   </ion-item>
 
   <ion-item>
-    <ion-button expand="block" (click)="presentToast('bottom')">Buscar Viaje</ion-button>
+    <ion-button expand="block" (click)="verDatos()">Buscar Viaje</ion-button>
   </ion-item>
 </ion-content>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthLoginGuard } from './guards/auth-login.guard';
+import { RutaProtegidaGuard } from './guards/ruta-protegida.guard';
 
 
 const routes: Routes = [
@@ -30,13 +31,15 @@ const routes: Routes = [
     canLoad:[AuthLoginGuard]
   },
   {
-    path: '**',
-    loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
+    path: 'buscar-viaje',
+    loadChildren: () => import('./buscar-viaje/buscar-viaje.module').then( m => m.BuscarViajePageModule),
+    canActivate: [RutaProtegidaGuard]
   },
   {
-    path: 'buscar-viaje',
-    loadChildren: () => import('./buscar-viaje/buscar-viaje.module').then( m => m.BuscarViajePageModule)
+    path: '**', /* TIENE QUE IR AL FINAL DE LOS PATHS PQ SINO LOS PATH QUE ESTÉN DEBAJO NO FUNCIONAN */
+    loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
+
 ];
 
 @NgModule({

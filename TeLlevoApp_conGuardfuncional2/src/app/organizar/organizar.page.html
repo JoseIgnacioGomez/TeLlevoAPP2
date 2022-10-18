@@ -1,42 +1,42 @@
-<app-menu></app-menu>
-  <ion-header>
+<ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
+        <ion-back-button></ion-back-button>
       </ion-buttons>
         <ion-title>Crear viaje</ion-title>
     </ion-toolbar>
   </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label position="floating">Asientos Disponibles</ion-label>
-    <ion-input placeholder="N° de asientos disponibles"></ion-input>
-  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Asientos Disponibles</ion-label>
+      <ion-input type="number" [(ngModel)]="usuario.asientos" placeholder="N° de asientos disponibles"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Lugar de Destino</ion-label>
-    <ion-input placeholder="Destino"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Lugar de Destino</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.destino" placeholder="Destino"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Hora de Salida</ion-label>
-    <ion-input placeholder="Salida"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Hora de Salida</ion-label>
+      <ion-input type="time" [(ngModel)]="usuario.hora_salida" placeholder="Salida"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Modelo de Auto</ion-label>
-    <ion-input placeholder=""></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Patente</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.patente"placeholder="Patente del automóvil"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Número de Celular</ion-label>
-    <ion-input placeholder="Contacto"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Número de Celular</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.numero" placeholder="Contacto"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-button>
-      Crear  
-    </ion-button>
-  </ion-item>
+    <ion-item>
+      <ion-button (click)="ingresar()" expand="block" >Crear</ion-button>
+    </ion-item>
+
+</ion-list>
 </ion-content>
