@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { Storage } from '@capacitor/storage';
 import { Router } from '@angular/router';
+import { DbService } from '../servicios/db.service';
 
 
 @Component({
